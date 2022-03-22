@@ -1,0 +1,143 @@
+{% extends 'vehicle/adminbase.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+	.counter{
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+	transition:.5s;
+	cursor:pointer;
+	}
+	.counter:hover{
+	box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+	padding :5%;
+	}
+	.bg1{
+	background-color: #a4508b;
+	background-image: linear-gradient(326deg, #a4508b 0%, #5f0a87 74%);
+	}
+	.bg2{
+	background-color :#20bf55;
+	background-image: linear-gradient(315deg, #20bf55 0%, #01baef 74%);
+	}
+	.bg3{
+	background-color: #6b0f1a;
+	background-image: linear-gradient(315deg, #6b0f1a 0%, #b91372 74%);
+
+	}
+	.bg4{
+	background-color: #63d471;
+background-image: linear-gradient(315deg, #63d471 0%, #233329 74%);
+	}
+	.icon{
+	font-size:80px;
+	opacity:0.5;
+	}
+	.divv{
+	background:url('https://th.bing.com/th/id/OIP.1ZAqJgMbBGPRe2kcOeYrMAHaEf?pid=ImgDet&rs=1') ;
+	background-repeat:no-repeat;
+	background-position: center;
+	background-size: cover;
+	color: #fff;
+	height: 300px;
+		}
+		.divv h1{
+		padding:100px 50px;
+		}
+
+</style>
+	<!-- main content -->
+
+	<div class="wrapper">
+	<div class="divv">
+	<h1>Hello User!!</h1>
+		</div>
+<!-- ****** cards start ********** -->
+		<div class="row">
+			<div class="col-3 col-m-6 col-sm-6">
+				<div class="counter bg1">
+					<p>
+						<i class="fas fa-users icon"></i>
+					</p>
+					<h3>{{total_customer}}</h3>
+					<p>Total Customer</p>
+				</div>
+			</div>
+			<div class="col-3 col-m-6 col-sm-6">
+				<div class="counter bg2">
+					<p>
+						<i class="fas fa-hat-cowboy icon"></i>
+					</p>
+					<h3>{{total_mechanic}}</h3>
+					<p>Total Mechanic</p>
+				</div>
+			</div>
+			<div class="col-3 col-m-6 col-sm-6">
+				<div class="counter bg3">
+					<p>
+						<i class="fas fa-spinner icon"></i>
+					</p>
+					<h3>{{total_request}}</h3>
+					<p>Total Enquiry</p>
+				</div>
+			</div>
+			<div class="col-3 col-m-6 col-sm-6">
+				<div class="counter bg4">
+					<p>
+						<i class="fas fa-comments icon"></i>
+					</p>
+					<h3>{{total_feedback}}</h3>
+					<p>Total Feedback</p>
+				</div>
+			</div>
+		</div>
+<!-- ****** cards end ********** -->
+
+
+<!-- ****** table  start ********** -->
+
+		<div class="row">
+			<div class="col-12 col-m-12 col-sm-12">
+				<div class="card">
+					<div class="card-header">
+						<h3 style="color:red; text-align:center" >Recent Enquiry By Customer
+						</h3>
+
+					</div>
+					<div class="card-content">
+						<table>
+							<thead>
+								<tr>
+									<th>Customer Name</th>
+									<th>Vehicle Name</th>
+									<th>Category</th>
+									<th>Vehicle Model</th>
+									<th>Vehicle Brand</th>
+									<th>Problem Description</th>
+								</tr>
+							</thead>
+							<tbody>
+								{% for c,r in data %}
+								<tr>
+									<td> {{c.get_name}}</td>
+									<td> {{r.vehicle_name}}</td>
+									<td>{{r.category}}</td>
+									<td>{{r.vehicle_model}}</td>
+									<td>{{r.vehicle_brand}}</td>
+									<td>{{r.problem_description}}</td>
+								</tr>
+								{% endfor %}
+
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+<!-- ****** table start ********** -->
+
+  <br><br><br><br><br><br>
+
+	</div>
+	<!-- end main content -->
+{% endblock content %}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <style type="text/css">
+      
+/*Review box begins*/
+
+.reviewbox{margin-top: 5%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    width: 100%;
+}
+.cont{ 
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+	grid-gap: 20px;
+	box-sizing: border-box;
+	padding: 20px;
+}
+.cont .box{margin-top: 15%;
+position: relative;
+padding: 80px 40px 40px;
+background: #fff;
+cursor: pointer;
+box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+.cont .box:hover{
+	color: white;
+}
+.cont .box1:hover{
+    
+    background-color: #63d471;
+background-image: linear-gradient(315deg, #63d471 0%, #233329 74%);
+}
+.cont .box2:hover{
+    
+	background-color: #a4508b;
+	background-image: linear-gradient(326deg, #a4508b 0%, #5f0a87 74%);
+}
+
+.cont .box3:hover{
+    
+	background-color: #6b0f1a;
+	background-image: linear-gradient(315deg, #6b0f1a 0%, #b91372 74%);
+
+}
+
+.cont .box p{
+	margin: 0;
+	padding: 0;
+}
+.cont .box h4{
+	margin: 20px 0 0;
+	padding: 0;
+    float: right;
+	
+	font-size: 18px;
+	line-height: 20px;
+	font-weight: 700px;
+	text-transform: uppercase;
+}
+.cont .box .imgbox{
+	position: absolute;
+	top: -60px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	overflow:hidden;
+} 
+.cont .box .imgbox img{
+	width:100%;
+	height: 100%;
+}
+.cont .box:before{
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    width: 120px;
+    height:120px;
+    background: url("https://th.bing.com/th/id/Rd887ea0ae7c2f73ebde6441e57510c66?rik=9ZY3zEflxkE1MA&riu=http%3a%2f%2fwww.i2symbol.com%2fimages%2fsymbols%2fpunctuation%2fheavy_double_comma_quotation_mark_ornament_u275E_icon_256x256.png&ehk=lma00PFzh6fiFXcrS%2b85ohqXSLi34coqXOgL9NTYwCk%3d&risl=&pid=ImgRaw");
+    background-size: cover;
+    opacity: 0.3;
+    pointer-events: none;
+    transition: 0.5s 
+}
+.cont .box:hover:before{
+    transform: translateY(-60px);
+    opacity: 1;}
+  .cont .box:after{
+    content: '';
+    position: absolute;
+    bottom: 20px;
+    left: 40px;
+    width: 120px;
+    height:120px;
+    background: url("https://th.bing.com/th/id/Rd887ea0ae7c2f73ebde6441e57510c66?rik=9ZY3zEflxkE1MA&riu=http%3a%2f%2fwww.i2symbol.com%2fimages%2fsymbols%2fpunctuation%2fheavy_double_comma_quotation_mark_ornament_u275E_icon_256x256.png&ehk=lma00PFzh6fiFXcrS%2b85ohqXSLi34coqXOgL9NTYwCk%3d&risl=&pid=ImgRaw");
+    background-size: cover;
+    opacity: 0.3;
+    pointer-events: none;
+    transition: 0.5s ;
+    transform: rotate(180deg) translateY(0px);
+}
+.cont .box:hover:after{
+    transform: rotate(180deg) translateY(-60px);
+    opacity: 1;}  
+
+/*Review box ends*/
+   
+  </style>
+</head>
+
+<body>
+
+<h1>reviews</h1>
+<div class="reviewbox">
+    <div class="cont">
+        <div class="box box1">
+            <div class="imgbox">
+                <img src="https://drive.google.com/uc?id=1IMxByDPglkygc5tEhqemna-NdHc8-Se7">
+            </div>
+            <p>
+                Thanks for making my portrait so beautifully.It was praised by everyone to whom i have shown.
+                I would recommend everyone to avail your art services.
+            </p>
+            <h4>Happy Customer<br><span>Mr.Ritik Tode</span>
+            </h4>
+        </div>
+        <div class="box box2">
+            <div class="imgbox">
+                <img src="https://drive.google.com/uc?id=1ILRl5c3OCxNl0La1KS4568W4jPOdgQH0">
+            </div>
+            <p>
+                It seems to be magic spells in your hands.Incredible designs,top quality,amazing artworks and best services.
+                and thanks to sketch my photo so well.
+            </p>
+            <h4>Happy Customer<br><span>Ms.Rani Mugaliya</span>
+            </h4>
+        </div>
+        <div class="box box3">
+            <div class="imgbox">
+                <img src="https://drive.google.com/uc?id=1IIxghUVLxNpWEmhdBT_f_lUuwZCCXjYn">
+            </div>
+            <p>
+                  My portrait was very fabulous.A lots of thanks for that.and also prices are much affordable than any other platforms.
+            </p>
+            <h4>Happy Customer<br><span>mr.kamal kumar</span>
+            </h4>
+        </div>
+    </div>
+    </div>
+
+</body>
+
+</html>
